@@ -35,27 +35,27 @@ using Steamworks;
 
 namespace PlayEveryWare.EpicOnlineServices.Editor.Utility
 {
-    public class SteamworksUtility : MonoBehaviour
-    {
-        public static string GetSteamworksVersion()
+        public class SteamworksUtility : MonoBehaviour
         {
+                public static string GetSteamworksVersion()
+                {
 #if DISABLESTEAMWORKS
-            return "Steamworks not imported or not supported on platform";
+                        return "Steamworks not imported or not supported on platform";
 #else
             return Steamworks.Version.SteamworksSDKVersion;
 #endif
-        }
+                }
 
-        /// <summary>
-        /// This is to populate the SteamConfig's steamApiInterfaceVersionsArray. It needs to be configured exactly like this for Steamworks v1.58a onwards.
-        /// This value is identical to steam_api.h's pszInternalCheckInterfaceVersions value.
-        /// https://dev.epicgames.com/docs/en-US/api-ref/structs/eos-integrated-platform-steam-options
-        /// </summary>
-        /// <returns></returns>
-        public static List<string> GetSteamInterfaceVersions()
-        {
+                /// <summary>
+                /// This is to populate the SteamConfig's steamApiInterfaceVersionsArray. It needs to be configured exactly like this for Steamworks v1.58a onwards.
+                /// This value is identical to steam_api.h's pszInternalCheckInterfaceVersions value.
+                /// https://dev.epicgames.com/docs/en-US/api-ref/structs/eos-integrated-platform-steam-options
+                /// </summary>
+                /// <returns></returns>
+                public static List<string> GetSteamInterfaceVersions()
+                {
 #if DISABLESTEAMWORKS
-            return new List<string>();
+                        return new List<string>();
 #else
             return new List<string>()
             {
@@ -63,7 +63,6 @@ namespace PlayEveryWare.EpicOnlineServices.Editor.Utility
                  Steamworks.Constants.STEAMNETWORKINGUTILS_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMAPPS_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMFRIENDS_INTERFACE_VERSION,
-                 Steamworks.Constants.STEAMGAMESEARCH_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMHTMLSURFACE_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMHTTP_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMINPUT_INTERFACE_VERSION,
@@ -86,6 +85,6 @@ namespace PlayEveryWare.EpicOnlineServices.Editor.Utility
                  Steamworks.Constants.STEAMVIDEO_INTERFACE_VERSION
         };
 #endif
+                }
         }
-    }
 }
