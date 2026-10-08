@@ -69,7 +69,6 @@ namespace PlayEveryWare.EpicOnlineServices.Editor.Utility
                  Steamworks.Constants.STEAMINVENTORY_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMMATCHMAKINGSERVERS_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMMATCHMAKING_INTERFACE_VERSION,
-                 Steamworks.Constants.STEAMMUSICREMOTE_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMMUSIC_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMNETWORKINGMESSAGES_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMNETWORKINGSOCKETS_INTERFACE_VERSION,
